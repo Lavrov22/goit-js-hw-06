@@ -13,7 +13,7 @@ firstItem.textContent = ingredients[0];
 firstItem.classList.add('item');
 
 const secondItem = document.createElement('li');
-secondItem.textContent = ingredients[1];
+secondItem.textContent = ingredients[1];  
 secondItem.classList.add('item');
 
 const thirdItem = document.createElement('li');
@@ -34,4 +34,3 @@ sixthItem.classList.add('item');
 
 ulRef.append(firstItem, secondItem, thirdItem, fourthItem, fifthItem, sixthItem);
 
-console.log(ulRef.childNodes);
