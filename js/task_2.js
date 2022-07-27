@@ -13,7 +13,7 @@ const ulRef = document.querySelector('#ingredients');
 // firstItem.classList.add('item');
 
 // const secondItem = document.createElement('li');
-// secondItem.textContent = ingredients[1];  
+// secondItem.textContent = ingredients[1];
 // secondItem.classList.add('item');
 
 // const thirdItem = document.createElement('li');
@@ -34,6 +34,16 @@ const ulRef = document.querySelector('#ingredients');
 
 // ulRef.append(firstItem, secondItem, thirdItem, fourthItem, fifthItem, sixthItem);
 
-const markup = ingredients.map(ingredient => `<li class = item>${ingredient}</li>`).join('');
-ulRef.insertAdjacentHTML("beforeend", markup);
+// const markup = ingredients.map(ingredient => `<li class = item>${ingredient}</li>`).join('');
+// ulRef.insertAdjacentHTML("beforeend", markup);
+// console.log(ulRef);
+
+const markup = ingredients.map(ingredient =>
+{const item = document.createElement('li');
+item.textContent = ingredient;
+  item.classList.add('item');
+  return item;
+});
+
+ulRef.append(...markup);
 console.log(ulRef);
