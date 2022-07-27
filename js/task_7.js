@@ -6,7 +6,7 @@ const refs = {
 refs.input.addEventListener('input', onInputSize)
 
 function onInputSize() {
-    const spanSize = Number(refs.input.value);
+    const spanSize = refs.input.value;
     console.log(spanSize);
     refs.span.style.fontSize = `${spanSize}px`;
     return refs.span.style.fontSize;
